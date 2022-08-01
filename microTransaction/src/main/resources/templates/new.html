@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>Create New Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+    <script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+<style>
+a{
+	color: white;
+}
+body{
+	background-color: #446E82;
+	color: white;
+}
+h1{
+	font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+<div align="center">
+    <h1>Create New Employee</h1>
+    <br />
+     <div class="col-sm-3" id="container">
+    <form action="#" th:action="@{/save}" th:object="${transaction}" method="post">
+      
+<div alight="left">
+
+            <tr>
+                <label class="form-label" >user name</label>
+                <td>
+                <input type="hidden" th:field="*{id}" />
+                <input type="text" th:field="*{firstpoint}" class="form-control" placeholder="user name" required/>
+                </td>
+            </tr>
+         </div>  
+        
+        
+          <div alight="left">
+            <tr>
+                <label class="form-label" >receiver</label>
+                
+                <td>
+                 <input type="text" th:field="*{endpoint}" class="form-control" placeholder="receiver" required/>
+                </td>
+            </tr>
+         </div>  
+         <div alight="left">
+                 <tr>
+                 <label class="form-label" >send amount</label>
+                <td><input type="text" th:field="*{amount}" class="form-control" placeholder="amount" required/></td>
+            </tr>
+            </div>
+<br>
+            <tr>
+            <td colspan="2"><button type="submit" class="btn btn-info">Save</button> </td>
+            </tr>
+ 
+    </form>
+</div>
+ 
+</body>
+</html>

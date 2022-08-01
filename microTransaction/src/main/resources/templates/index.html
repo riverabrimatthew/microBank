@@ -1,0 +1,77 @@
+<html xmlns:th="http://www.thymeleaf.org">
+ <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<script src= "https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
+<title>The Bank</title>
+<style>
+h2{
+	color: white;
+	font-weight: bold;
+}
+body{
+	text-align: center;
+	background-color: #446E82;
+	
+	font-weight: bold;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+	width: 50px;
+	height: 25px;
+	background-color: #707B7C;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+a.button:hover{
+	background-color: black;
+	transition: 0.5s;
+}
+.main_container{
+	margin-top:20px;
+	width: 55%;
+	text-align: center;
+  	margin-left: auto;
+  	margin-right: auto;
+  	background-color: white;
+}
+
+</style>
+</head>
+<body>
+		<div class="very_main_container">
+			<div class="header_container">
+				<div class="title_container">
+					<h2 class="Main Title">Transaction List</h2>
+				</div>
+			</div>
+			<div class="main_container">
+				<div class="background_main">
+				<table class="table">
+					<thead class="thead-dark" style="text-align:center" >
+						<tr>
+							<th>ID</th>
+							<th>firstpoint</th>
+							<th>endpoint</th>
+							<th>amount</th>
+							<th>transactdate</th>
+						</tr>
+					</thead>
+					<tbody style="text-align:center">
+						<tr th:each="transaction : ${listtransaction}">
+							<td th:text="${transaction.id}">ID</td>
+							<td th:text="${transaction.firstpoint}">firstpoint</td>
+							<td th:text="${transaction.endpoint}">endpoint</td>
+							<td th:text="${transaction.amount}">amount</td>
+							<td th:text="${transaction.transactdate}">transactdate</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>

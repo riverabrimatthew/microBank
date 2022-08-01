@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>The Bank</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<style>
+
+body{
+	font-weight:bold;
+	background-color: #446E82;
+}
+.outer_container{
+	position: absolute;
+  	margin: auto;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 380px;
+  	height: 500px;
+  	background-color: white;
+  	border-radius: 10px;
+  	box-shadow: 0px 4px 50px -20px black;
+  	
+ 
+}
+.inner_container{
+	position: absolute;
+  	margin: auto;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 360px;
+  	height: 480px;
+  	background-color: white;
+  	border-radius: 40px;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+}
+.inside_container{
+	position: absolute;
+  	margin: auto;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 200px;
+  	height: 400px;
+  	background-color: white;
+  	border-radius: 40px;
+}
+.Login_title{
+ 	text-align: center;
+ 	font-size: 30px;
+ 	margin-bottom: 10px;
+}
+.User_title{
+ 	text-align: left;
+ 	font-size: 20px;
+ 	margin-bottom: 10px;
+}
+.Password_title{
+ 	text-align: left;
+ 	font-size: 20px;
+ 	margin-bottom: 10px;
+}
+.button {
+  background-color: #707B7C;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button:hover{
+	background-color: black;
+	transition: 0.5s;
+
+}
+.button_outsideContainer{
+	padding-top:30px;
+  	margin: auto;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 200px;
+  	height: 100px;
+  	background-color: white;
+  	border-radius: 40px;
+  	margin-top: 10px;
+}
+.button_insideContainer{
+  	margin: auto;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	width: 100px;
+  	height: 50px;
+  	background-color: white;
+  	border-radius: 40px;
+}
+.top_container{
+	background-color: blue;
+	width:200px;
+	height:200px;
+}
+.down_container{
+	background-color: red;
+	width:200px;
+	height:200px;
+}
+</style>
+</head>
+    <body>
+        <div class="outer_container">     
+        	<div class="inner_container"> 
+        		<div class="inside_container"> 		
+        		    <form action="#" th:action="@{/home}" th:object="${user}" method="post">
+		        		<div class="Login_title">Login</div>
+		             	<div class="User_title">Username</div>
+		             	<input type="text" th:field="*{username}" class="form-control"/>
+		                <div class="Password_title">Password</div>
+		                <input type="password" th:field="*{password}" class="form-control"/>
+		                <div class="button_outsideContainer">
+		                	<div class="button_insideContainer">		                		
+		            			<button type="submit" class="button">Login</button>
+		                	</div>
+		                </div>
+		            </form>
+        		</div>
+        	</div>
+     	</div>  
+     	
+     	
+
+	</body>
+</html>
