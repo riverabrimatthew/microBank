@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>The Bank</title>
+<link rel = "icon" type = "image/png" href = "https://cdn-icons-png.flaticon.com/512/2830/2830284.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
 <style>
 body{
@@ -157,10 +158,10 @@ a.button {
 						</div>
 						<div class="options">					
 							<div id="opt_button">
-								<a href="http://localhost:1020/new" class="button">Transaction</a>
+								<a href="http://localhost:1020/new" class="button">Send Money</a>
 							</div>
 							<div id="opt_button">
-								<a href="http://localhost:1020" class="button">Transaction History</a>
+								<a th:href="@{'http://localhost:1020/transactList?firstpoint=' + ${accountnumber}}" class="button">Transaction History</a>
 							</div>
 						</div>
 					</div>

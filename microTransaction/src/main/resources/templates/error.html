@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <link rel = "icon" type = "image/png" href = "https://cdn-icons-png.flaticon.com/512/2830/2830284.png">
+    <title>The Bank</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
+<style>
+a{
+	color: blak;
+}
+body{
+	background-color: #446E82;
+	color: black;	
+	font-weight: bold;
+}
+.main_container{
+	position: absolute;
+  	margin: auto;
+ 	top: 0;
+ 	right: 0;
+  	bottom: 0;
+  	left: 0;
+  	background-color: white;  
+	height: 350px;
+	max-width: 400px;
+	min-width: 300px;
+	border-radius: 10px;
+  	box-shadow: 0px 4px 50px -20px black;
+  	text-align: center;
+}
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+	width: 75px;
+	height: 45px;
+	background-color: #707B7C;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding-top: 10px;
+    text-align: center;
+}
+a.button:hover{
+	background-color: black;
+	transition: 0.5s;
+}
+.definition_container{
+	font-size: 20px;
+}
+img{
+	margin-top: 10px;
+	height: 200px;
+	width: 200px;
+}
+.button_container{
+	margin-top: 10px;
+}	
+</style>
+</head>
+<body>
+<div>
+	<div class="main_container">
+		<div class="inside_container">		
+			<div class="image_container">					
+				<img src="https://cdn-icons.flaticon.com/png/512/3273/premium/3273666.png?token=exp=1659522767~hmac=afae016beaf3e34ac7d8db422a7a56af">
+			</div>
+			<div class="within_container">
+				<div class="definition_container">
+					Details are invalid <br>please retry
+				</div>
+				<div class="button_container">
+					<a href ="http://localhost:1020/new" class="button" >Back</a>
+				</div>
+			</div>
+		</div>
+
+	
+	</div>
+</div>
+ 
+</body>
+</html>

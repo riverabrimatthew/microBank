@@ -3,6 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>The Bank</title>
+<link rel = "icon" type = "image/png" href = "https://cdn-icons-png.flaticon.com/512/2830/2830284.png">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cosmo/bootstrap.min.css" />
 <style>
 
@@ -126,9 +127,9 @@ body{
         		    <form action="#" th:action="@{/home}" th:object="${user}" method="post">
 		        		<div class="Login_title">Login</div>
 		             	<div class="User_title">Username</div>
-		             	<input type="text" th:field="*{username}" class="form-control"/>
+		             		<input type="text" th:field="*{username}" class="form-control"/>
 		                <div class="Password_title">Password</div>
-		                <input type="password" th:field="*{password}" class="form-control"/>
+		                	<input type="password" th:field="*{password}" class="form-control"/>
 		                <div class="button_outsideContainer">
 		                	<div class="button_insideContainer">		                		
 		            			<button type="submit" class="button">Login</button>
